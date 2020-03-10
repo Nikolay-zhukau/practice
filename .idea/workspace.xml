@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d8427a05-8de8-4b39-b4e3-c19457202696" name="Default Changelist" comment="" />
+    <list default="true" id="d8427a05-8de8-4b39-b4e3-c19457202696" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitignore.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gitignore.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,13 +14,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1WhWzxj0j5JhujcMXZt5o2YP11n" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunManager" selected="Application.exercise1lb">
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../practic-one" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="practice.Main" />
       <module name="javab" />
@@ -28,7 +39,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="exercise1lb" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="exercise1lb" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="practice.exercise1lb" />
       <module name="javab" />
       <extension name="coverage">
@@ -42,12 +53,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="Application.exercise1lb" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.exercise1lb" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -77,46 +87,81 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="716" y="343" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579606608632">
+    <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580230383545">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="716" y="343" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1579606608632" />
-    <state width="1340" height="266" key="GridCell.Tab.0.bottom" timestamp="1579607317411">
+    <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1580230383545" />
+    <state x="716" y="343" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580229504910">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1579607317411" />
-    <state width="1340" height="266" key="GridCell.Tab.0.center" timestamp="1579607317411">
+    <state x="716" y="343" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1580229504910" />
+    <state x="483" y="319" key="FileChooserDialogImpl" timestamp="1580858154036">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1579607317411" />
-    <state width="1340" height="266" key="GridCell.Tab.0.left" timestamp="1579607317411">
+    <state x="483" y="319" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1580858154036" />
+    <state width="1162" height="228" key="GridCell.Tab.0.bottom" timestamp="1580849557428">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1579607317411" />
-    <state width="1340" height="266" key="GridCell.Tab.0.right" timestamp="1579607317411">
+    <state width="1162" height="228" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1580849557428" />
+    <state width="1162" height="228" key="GridCell.Tab.0.center" timestamp="1580849557428">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1579607317411" />
-    <state width="1340" height="328" key="GridCell.Tab.1.bottom" timestamp="1579606050558">
+    <state width="1162" height="228" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1580849557428" />
+    <state width="1162" height="228" key="GridCell.Tab.0.left" timestamp="1580849557428">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="328" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1579606050558" />
-    <state width="1340" height="328" key="GridCell.Tab.1.center" timestamp="1579606050557">
+    <state width="1162" height="228" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1580849557428" />
+    <state width="1162" height="228" key="GridCell.Tab.0.right" timestamp="1580849557428">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="328" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1579606050557" />
-    <state width="1340" height="328" key="GridCell.Tab.1.left" timestamp="1579606050557">
+    <state width="1162" height="228" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1580849557428" />
+    <state width="1340" height="328" key="GridCell.Tab.1.bottom" timestamp="1579616116683">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="328" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1579606050557" />
-    <state width="1340" height="328" key="GridCell.Tab.1.right" timestamp="1579606050558">
+    <state width="1340" height="328" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1579616116683" />
+    <state width="1340" height="328" key="GridCell.Tab.1.center" timestamp="1579616116683">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="328" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1579606050558" />
-    <state x="661" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1579602845933">
+    <state width="1340" height="328" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1579616116683" />
+    <state width="1340" height="328" key="GridCell.Tab.1.left" timestamp="1579616116683">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="661" y="364" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1579602845933" />
+    <state width="1340" height="328" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1579616116683" />
+    <state width="1340" height="328" key="GridCell.Tab.1.right" timestamp="1579616116683">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1340" height="328" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1579616116683" />
+    <state x="461" y="183" key="SettingsEditor" timestamp="1580230539495">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="461" y="183" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1580230539495" />
+    <state x="661" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1580847808391">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="661" y="364" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1580847808391" />
+    <state x="86" y="201" key="new project wizard" timestamp="1580848141140">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="86" y="201" key="new project wizard/0.0.1920.1080@0.0.1920.1080" timestamp="1580848141140" />
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1580230561247">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1580230561247" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/Dog.java</url>
+          <line>2</line>
+          <properties field="breed" class="dog" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
