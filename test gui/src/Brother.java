@@ -3,14 +3,17 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
+import java.util.Map;
+import java.awt.Container;
 
 
 public class Brother {
     JPanel mainPanel;
     JFrame theFrame;
+    JPanel jCheckBoxPanel;
     DefaultTableModel model;
     JPanel jRadioButtonPanel;
-    ActionListener actionListener = new TestActionListener();
     private Object[] columnsHeader = new String[]{"Today", "Tomarrow"};
 
     public static void main(String[] args) {
@@ -37,10 +40,6 @@ public class Brother {
         theFrame.setVisible(true);
     }
 
-    class TestActionListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-        }
-    }
 
     public void fragmentFive() {
         JTextField field5 = new JTextField();
@@ -55,29 +54,32 @@ public class Brother {
 
         JButton jb6 = new JButton();
         jb6.setLayout(null);
-        jb6.setBounds(310, 300, 80, 20);
+        jb6.setBounds(310, 300, 110, 20);
+        jb6.setText("High priority");
         theFrame.add(jb6);
 
         JButton jb7 = new JButton();
         jb7.setLayout(null);
-        jb7.setBounds(310, 340, 80, 20);
+        jb7.setBounds(310, 340, 110, 20);
+        jb7.setText("Low priority");
         theFrame.add(jb7);
 
         JButton jb8 = new JButton();
         jb8.setLayout(null);
-        jb8.setBounds(310, 380, 80, 20);
+        jb8.setBounds(310, 380, 110, 20);
+        jb8.setText("High priority");
         theFrame.add(jb8);
 
-        JTable jt = new JTable(10, 2);
-        JScrollPane jspn = new JScrollPane(jt);
-        jspn.setBounds(420, 300, 200, 100);
 
-        //     model = new DefaultTableModel() {
-        //     public boolean isCellEditable(int row, int Column) {
-        //           return true;
-        //      };
-        //     };
-        //     model.setColumnIdentifiers(columnsHeader);
+
+        String[] nameTableColumns = new String[]{"High priority", "Low priority"};
+        JTable jt = new JTable();
+        DefaultTableModel tableModel = (DefaultTableModel)jt.getModel();
+        tableModel.setColumnCount(2);
+        tableModel.setRowCount(1);
+        tableModel.setColumnIdentifiers(nameTableColumns);
+        JScrollPane jspn = new JScrollPane(jt);
+        jspn.setBounds(440, 300, 200, 100);
 
 
         theFrame.add(jspn);
@@ -87,9 +89,54 @@ public class Brother {
         jl5.setLayout(null);
         jl5.setBounds(20, 300, 150, 20);
         theFrame.add(jl5);
+
+
+        jb6.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String textEqualsJTextField = field5.getText();
+                jt.setValueAt(textEqualsJTextField,0,0);
+                field5.setText(null);
+
+            }
+        });
+
+        jb7.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String textFromColumnOne = (String)jt.getValueAt(0,0);
+                jt.setValueAt(textFromColumnOne,0,1);
+                jt.setValueAt(null,0,0);
+            }
+        });
+
+        jb8.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String textFromColumnTwo = (String)jt.getValueAt(0,1);
+                jt.setValueAt(textFromColumnTwo,0,0);
+                jt.setValueAt(null,0,1);
+            }
+        });
     }
 
+
     public void fragmentFour() {
+        jCheckBoxPanel = new JPanel();
+        jCheckBoxPanel.setLayout(new FlowLayout());
+        jCheckBoxPanel.setBounds(390, 220, 300, 30);
+        String[] eating = {"Breakfast", "Lunch", "Dinner"};
+        Map<String,JCheckBox> jCheckBoxGroup = new HashMap<>();
+        for (String s : eating){
+            JCheckBox jcb = new JCheckBox(s);
+            jCheckBoxGroup.put(s, jcb);
+            jCheckBoxPanel.add(jcb);
+        }
+
+
+        theFrame.add(jCheckBoxPanel);
+
+
         JTextField field4 = new JTextField();
         field4.setLayout(null);
         field4.setLocation(130, 220);
@@ -106,28 +153,30 @@ public class Brother {
         jl4.setText("What Will Cook:");
         theFrame.add(jl4);
 
+
         JButton jb5 = new JButton();
         jb5.setLayout(null);
         jb5.setBounds(310, 220, 80, 20);
+        jb5.setText("Choose");
         theFrame.add(jb5);
 
-        JCheckBox jchb = new JCheckBox();
-        jchb.setText("Breakfast");
-        jchb.setLayout(null);
-        jchb.setBounds(400, 220, 100, 20);
-        theFrame.add(jchb);
-
-        JCheckBox jchb2 = new JCheckBox();
-        jchb2.setText("Lunch");
-        jchb2.setLayout(null);
-        jchb2.setBounds(500, 220, 80, 20);
-        theFrame.add(jchb2);
-
-        JCheckBox jchb3 = new JCheckBox();
-        jchb3.setText("Dinner");
-        jchb3.setLayout(null);
-        jchb3.setBounds(580, 220, 80, 20);
-        theFrame.add(jchb3);
+        jb5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String textEqualsEating = field4.getText();
+                JCheckBox selectedBox = jCheckBoxGroup.get(textEqualsEating);
+                if (selectedBox == null) {
+                    JOptionPane.showMessageDialog(null, "This tipe of eat does not exist");
+                } else {
+//                   if (selectedBox.isSelected()){
+//                       selectedBox.setSelected(false);
+//                   }else {
+//                       selectedBox.setSelected(true);
+//                   }
+                    selectedBox.setSelected(!selectedBox.isSelected());
+                }
+            }
+        });
     }
 
     public void fragmentThree() {
@@ -158,70 +207,30 @@ public class Brother {
         jRadioButtonPanel = new JPanel(new GridLayout(0, 1, 0, 5));
         jRadioButtonPanel.setBorder(BorderFactory.createTitledBorder("Who"));
         jRadioButtonPanel.setBounds(490, 100, 150, 100);
-        String[] familyMember = {"Mother", "Father", "Brother"};
-        JRadioButton[] jRadioButtonGroup = new JRadioButton[familyMember.length];
-        ButtonGroup bg = new ButtonGroup();
+        String[] familyMember = {"Mother", "Father", "Brother", "Cousin"};
+        Map<String,JRadioButton> jRadioButtonGroup = new HashMap<>();
+                ButtonGroup bg = new ButtonGroup();
 
-        for (int i = 0; i < familyMember.length; i++) {
-            String s = familyMember[i];
+        for (String s : familyMember) {
             JRadioButton jrb = new JRadioButton(s);
-            jRadioButtonGroup[i] = jrb;
+            jRadioButtonGroup.put(s, jrb);
             jRadioButtonPanel.add(jrb);
             bg.add(jrb);
-
-            //       //     if (i == 1) { jrb.setSelected(true);
-
-            //   }
         }
         theFrame.add(jRadioButtonPanel);
         jb4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String textEqualsFamilyMember = field3.getText();
-                boolean textEqualsMember = false;
-                for (String member : familyMember) {
-                    if (textEqualsFamilyMember.equals(member)) {
-                        textEqualsMember = true;
-                        break;
-                    }
-                }
-                if (!textEqualsMember) {
+                JRadioButton selectedRadio = jRadioButtonGroup.get(textEqualsFamilyMember);
+                if (selectedRadio == null) {
 
                     JOptionPane.showMessageDialog(null, "This family member does not exist");
                 } else {
-
-                    for (JRadioButton radio : jRadioButtonGroup) {
-                        if (textEqualsFamilyMember.equals(radio.getText())) {
-                            radio.setSelected(true);
-                            break;
-                        }
-                    }
-                    field3.setText(null);
-                    System.out.println("selected " + textEqualsFamilyMember);
+                    selectedRadio.setSelected(true);
                 }
-
-
-                //      for (int )
             }
         });
-
-        //  JRadioButton jrb1 = new JRadioButton();
-        //  jrb1.setLayout(null);
-        //  jrb1.setText("Mother");
-        //  jrb1.setBounds(490,100,150,20);
-        //  theFrame.add(jrb1);
-
-        //  JRadioButton jrb2 = new JRadioButton();
-        //  jrb2.setLayout(null);
-        //  jrb2.setText("Father");
-        //  jrb2.setBounds(490,140,150,20);
-        //  theFrame.add(jrb2);
-
-        //  JRadioButton jrb3 = new JRadioButton();
-        //  jrb3.setLayout(null);
-        //  jrb3.setText("Brother");
-        //  jrb3.setBounds(490,180,150,20);
-        //  theFrame.add(jrb3);
     }
 
     public void fragmentTwo() {
