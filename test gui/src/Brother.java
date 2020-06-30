@@ -5,7 +5,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.Map;
-import java.awt.Container;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class Brother {
@@ -21,10 +22,12 @@ public class Brother {
     }
 
     public void buildGui() {
-        theFrame = new JFrame("Brother");
+        theFrame = new JFrame();
         theFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         theFrame.setSize(800, 600);
         theFrame.setLayout(null);
+
+        TimerTaskRun();
 
         fragmentOne();
 
@@ -71,10 +74,9 @@ public class Brother {
         theFrame.add(jb8);
 
 
-
         String[] nameTableColumns = new String[]{"High priority", "Low priority"};
         JTable jt = new JTable();
-        DefaultTableModel tableModel = (DefaultTableModel)jt.getModel();
+        DefaultTableModel tableModel = (DefaultTableModel) jt.getModel();
         tableModel.setColumnCount(2);
         tableModel.setRowCount(1);
         tableModel.setColumnIdentifiers(nameTableColumns);
@@ -95,7 +97,7 @@ public class Brother {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String textEqualsJTextField = field5.getText();
-                jt.setValueAt(textEqualsJTextField,0,0);
+                jt.setValueAt(textEqualsJTextField, 0, 0);
                 field5.setText(null);
 
             }
@@ -104,18 +106,18 @@ public class Brother {
         jb7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String textFromColumnOne = (String)jt.getValueAt(0,0);
-                jt.setValueAt(textFromColumnOne,0,1);
-                jt.setValueAt(null,0,0);
+                String textFromColumnOne = (String) jt.getValueAt(0, 0);
+                jt.setValueAt(textFromColumnOne, 0, 1);
+                jt.setValueAt(null, 0, 0);
             }
         });
 
         jb8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String textFromColumnTwo = (String)jt.getValueAt(0,1);
-                jt.setValueAt(textFromColumnTwo,0,0);
-                jt.setValueAt(null,0,1);
+                String textFromColumnTwo = (String) jt.getValueAt(0, 1);
+                jt.setValueAt(textFromColumnTwo, 0, 0);
+                jt.setValueAt(null, 0, 1);
             }
         });
     }
@@ -126,8 +128,8 @@ public class Brother {
         jCheckBoxPanel.setLayout(new FlowLayout());
         jCheckBoxPanel.setBounds(390, 220, 300, 30);
         String[] eating = {"Breakfast", "Lunch", "Dinner"};
-        Map<String,JCheckBox> jCheckBoxGroup = new HashMap<>();
-        for (String s : eating){
+        Map<String, JCheckBox> jCheckBoxGroup = new HashMap<>();
+        for (String s : eating) {
             JCheckBox jcb = new JCheckBox(s);
             jCheckBoxGroup.put(s, jcb);
             jCheckBoxPanel.add(jcb);
@@ -208,8 +210,8 @@ public class Brother {
         jRadioButtonPanel.setBorder(BorderFactory.createTitledBorder("Who"));
         jRadioButtonPanel.setBounds(490, 100, 150, 100);
         String[] familyMember = {"Mother", "Father", "Brother", "Cousin"};
-        Map<String,JRadioButton> jRadioButtonGroup = new HashMap<>();
-                ButtonGroup bg = new ButtonGroup();
+        Map<String, JRadioButton> jRadioButtonGroup = new HashMap<>();
+        ButtonGroup bg = new ButtonGroup();
 
         for (String s : familyMember) {
             JRadioButton jrb = new JRadioButton(s);
@@ -376,5 +378,26 @@ public class Brother {
 
 
     }
+
+    public void TimerTaskRun() {
+        Timer dragField = new Timer();
+
+        dragField.schedule(new TimerTask() {
+            String dragField = "Brother                                        ";
+
+            @Override
+            public void run() {
+                char last = dragField.charAt(dragField.length() - 1);
+                dragField = last + dragField.substring(0, dragField.length() - 1);
+                theFrame.setTitle(dragField);
+
+            }
+        }, 100, 100);
+    }
+
 }
+
+
+
+
 
