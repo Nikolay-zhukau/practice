@@ -356,12 +356,22 @@ public class Brother {
 
             }
         });
-        jb.setText("enter");
         jb.setLayout(null);
         jb.setBounds(310, 20, 100, 20);
 
 
         theFrame.add(jb);
+        Timer buttonEnterDrag = new Timer();
+        buttonEnterDrag.schedule(new TimerTask() {
+            String textJb = "Enter  ";
+            @Override
+            public void run() {
+                char last = textJb.charAt(textJb.length()-1);
+                textJb = last + textJb.substring(0, textJb.length()-1);
+                jb.setText(textJb);
+
+            }
+        },0,1000);
 
 
         jcb.setLayout(null);
