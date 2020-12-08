@@ -35,12 +35,62 @@ public class Brother {
 
         fragmentThree();
 
-        fragmentFour();
+        fragmentFour(); 
 
         fragmentFive();
 
+        fragmentSix();
+
 
         theFrame.setVisible(true);
+    }
+
+    private void fragmentSix() {
+        JPanel panelForThings = new JPanel(new FlowLayout());
+        panelForThings.setBounds(20, 400, 620, 100);
+
+        theFrame.add(panelForThings);
+
+        class CircleBtn extends JButton {
+            public CircleBtn(String text) {
+                super(text);
+
+                Dimension size = getPreferredSize();
+                size.width = 30;
+                size.height = 40;
+                setPreferredSize(size);
+
+                setContentAreaFilled(false);
+            }
+
+            @Override
+            protected void paintComponent(Graphics g) {
+                if (getModel().isArmed()) {
+                    g.setColor(Color.red);
+                    setForeground(Color.blue);
+                } else {
+                    g.setColor(getBackground());
+                    setForeground(Color.gray);
+                }
+                g.fillOval(0, 0, getSize().width - 1, getSize().height - 1);
+
+                super.paintComponent(g);
+            }
+
+            @Override
+            protected void paintBorder(Graphics g) {
+                g.setColor(getForeground());
+                g.drawOval(0, 0, getSize().width - 1, getSize().height - 1);
+    //            g.drawOval();
+            }
+        }
+
+        JButton jb9 = new CircleBtn("Press");
+
+
+        panelForThings.add(jb9);
+
+
     }
 
 
@@ -170,11 +220,7 @@ public class Brother {
                 if (selectedBox == null) {
                     JOptionPane.showMessageDialog(null, "This tipe of eat does not exist");
                 } else {
-//                   if (selectedBox.isSelected()){
-//                       selectedBox.setSelected(false);
-//                   }else {
-//                       selectedBox.setSelected(true);
-//                   }
+
                     selectedBox.setSelected(!selectedBox.isSelected());
                 }
             }
@@ -364,14 +410,15 @@ public class Brother {
         Timer buttonEnterDrag = new Timer();
         buttonEnterDrag.schedule(new TimerTask() {
             String textJb = "Enter  ";
+
             @Override
             public void run() {
-                char last = textJb.charAt(textJb.length()-1);
-                textJb = last + textJb.substring(0, textJb.length()-1);
+                char last = textJb.charAt(textJb.length() - 1);
+                textJb = last + textJb.substring(0, textJb.length() - 1);
                 jb.setText(textJb);
 
             }
-        },0,1000);
+        }, 0, 1000);
 
 
         jcb.setLayout(null);
