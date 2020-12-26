@@ -9,14 +9,16 @@ public class ModulusE{
 		double n = 0;
         
 		while (sum <= e){
-        if(e >= 1.5){
-			n--;
-		}else{
-			n++;
-		}  					
+            if(e >= 1.5){
+			    n--;
+		    }else{
+			    n++;
+		    }  					
 			double commonTerm = (1/Math.pow(2, n))+(1/Math.pow(3, n));			
 			sum = sum + commonTerm;
-			System.out.println("Sum common tern is " + sum + " n : " + n);
+			if(sum >= e){
+			    System.out.println("Sum common tern is " + sum + " n : " + n);
+			}
 		}
 	}
 }
