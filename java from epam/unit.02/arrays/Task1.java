@@ -2,6 +2,8 @@ import java.util.*;
 
 public class Task1{
 	public static void main(String[]args){
+//  В массив A [N] занесены натуральные числа. Найти сумму тех элементов, которые кратны данному К.	
+
 		int kNumber = (int)(Math.random()*10);
 		System.out.println("K : " + kNumber);
 		int sumOfNumbersMultiplesK = 0;
