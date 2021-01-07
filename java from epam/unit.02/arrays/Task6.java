@@ -3,6 +3,9 @@ import java.util.Random;
 
 public class Task6{
 	public static void main(String[]args){
+//    Задана последовательность N вещественных чисел. Вычислить сумму чисел, порядковые номера которых
+//    являются простыми числами.
+
 		Random random = new Random();
 		double[] arrayD = new double[20];		
         for(int i = 0; i<arrayD.length;i++){
