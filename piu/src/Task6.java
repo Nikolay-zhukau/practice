@@ -14,20 +14,21 @@ public class Task6{
 		int serialNumber = 0;
 		double sumOfPrimeSerialNumbers = 0;
 		for(int i = 0; i<arrayD.length;i++){
-		    serialNumber = i;
-			boolean isPrime = false;
- 		    for(int a = 2;a <=serialNumber/2 ;a++){			
+		    serialNumber = i;		
+		
+		for(int a = 2;a <=serialNumber/2 ;a++){
+			    boolean prime = true;				
 				if((serialNumber % a) == 0){
-					isPrime = true;
+					prime = false;
 					break;
 				}
-                if(!isPrime){
+                if(prime){
 					sumOfPrimeSerialNumbers += arrayD[i];
 					System.out.println(serialNumber);
 				} 								
 			}
 		}
-		System.out.println("the sum of serial numbers is : " + (int)sumOfPrimeSerialNumbers);
+		System.out.println("the sum of serial numbers is : " + sumOfPrimeSerialNumbers);
         System.out.println(Arrays.toString(arrayD));		
 	}
 }
