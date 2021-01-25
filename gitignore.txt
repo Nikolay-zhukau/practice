@@ -1,5 +1,0 @@
-*.log
-*.xml
-.idea/
-/out
-/text gui/out
