@@ -1,10 +1,11 @@
 import java.util.*;
 
 public class Task3{
+	
 	public static void main(String[]args){
 //  Дан массив действительных чисел, размерность которого N. Подсчитать, сколько в нем отрицательных,
 //  положительных и нулевых элементов.	
-
+        
 		double N = 10;
 		double [] array = new double [10];
 		int countNegativeNum = 0;

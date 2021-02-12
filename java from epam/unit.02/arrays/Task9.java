@@ -21,8 +21,7 @@ public class Task9{
 		int[] arrays = arrayA(n);
 		for(int i = 0; i < arrays.length; i++){
 			int value = arrays[i];
-			int counts = 1;
-			
+			int counts = 1;			
 			for(int a = 0; a < arrays.length; a++){
 				if(arrays[a] == value){
 					counts++;

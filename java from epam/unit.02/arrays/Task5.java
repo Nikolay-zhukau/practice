@@ -1,7 +1,8 @@
 import java.util.*;
 
 public class Task5{
-//Даны целые числа а1 ,а2 ,..., аn . Вывести на печать только те числа, для которых аi > i.	
+//Даны целые числа а1 ,а2 ,..., аn . Вывести на печать только те числа, для которых аi > i.
+
 	public static void main(String[]args){
 		Random randInt = new Random();
 		int[] arrayInt = new int[10];

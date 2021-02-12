@@ -18,7 +18,7 @@ public class Task12{
 	}
 	private static int[][]diagonalLeft(int matrix[][]){
 		System.out.println("the left diagonal of the square is: ");
-		int [][]MyMatrix = matrix;
+		int [][]myMatrix = matrix;
         int heigth = matrix.length;
         int width = matrix[0].length;
         for(int col = 0; col < heigth; col++){
@@ -28,11 +28,11 @@ public class Task12{
 				}
 			}
 		}
-        return MyMatrix;		
+        return myMatrix;		
 	}
 	private static int [][]diagonalRight(int matrix[][]){
 		System.out.println("the right diagonal of the square is: ");
-		int [][] MyMatrix = matrix;
+		int [][] myMatrix = matrix;
 		int heigth = matrix.length;
 		int width = matrix[0].length;
 		int count = width;
